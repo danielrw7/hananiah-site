@@ -1,0 +1,122 @@
+a.has-icon {
+    padding-right: 1.2em;
+    ion-icon {
+        font-size: 22px;
+    }
+}
+
+.icon-medium-large {
+    font-size: 24px;
+}
+.icon-xlarge {
+    font-size: 85px * 1.22;
+}
+
+.has-icon {
+    position: relative;
+
+    ion-icon:not(.icon-ignore) {
+        position: absolute;
+        
+        right: 0.05rem;
+        top: calc(50% - 10px);
+        
+        &.icon-large {
+            top: calc(50% - 16px);
+        }
+    }     
+
+    &.button {
+        ion-icon {
+            right: 0.5rem;
+        }  
+    }
+    &.shadow {
+        > ion-icon:not(.icon-ignore) {
+            right: 1.75rem;
+        }  
+    }
+}
+
+.has-img-left {
+    $offset: 0.25rem;
+    img:first-child {
+        float: left;
+        margin-top: -$offset;
+    }
+    h4 {
+        position: relative;
+        margin-top: 1.3rem - $offset;
+        margin-left: 4.7rem;
+        min-height: 3.5rem;
+    }
+}
+
+.bg-secondary {
+    background-color: map-get($foundation-palette, 'secondary');
+    color: $white;
+}
+
+.bg-light-gray {
+    background-color: $light-gray;
+}
+.bg-medium-gray {
+    background-color: $medium-gray;
+    color: $white;
+}
+
+.bg-white {
+    background-color: $white;
+}
+
+.margin-bottom-0-5 {
+    margin-bottom: 0.5rem;
+}
+.margin-bottom-1-5 {
+    margin-bottom: 1.5rem;
+}
+.margin-bottom-2-5 {
+    margin-bottom: 2.5rem;
+}
+
+.button.primary:hover, .button.primary:focus {
+    background-color: darken($primary-color, 5%);
+}
+
+p.caption {
+    font-size: 12px;
+    text-rendering: optimizeLegibility;
+}
+
+.shadow {
+    border-radius: $global-radius;
+    padding: 1.5rem;
+
+    &.icon-padding {
+        @media screen and (min-width: map-get($breakpoints, 'medium')) {
+            padding-right: 5rem;
+        }
+    }
+
+    &.has-icon {
+        @media screen and (max-width: map-get($breakpoints, 'large')) {
+            padding-bottom: 0.6rem;
+            margin-bottom: 1.25rem;
+        }
+    }
+}
+
+body {
+    @media screen and (max-width: map-get($breakpoints, 'large')) {
+        $small-padding: 1rem;
+        padding-left: $small-padding;
+        padding-right: $small-padding;
+
+        .full-width {
+            margin-left: -$small-padding;
+            margin-right: -$small-padding;
+            padding-left: $small-padding;
+            padding-right: $small-padding;
+        }
+    }
+}
