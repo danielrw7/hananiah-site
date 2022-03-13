@@ -1,5 +1,5 @@
 a.has-icon {
-    padding-right: 1.2em;
+    padding-right: 1.5em;
     ion-icon {
         font-size: 22px;
     }
@@ -118,5 +118,15 @@ body {
             padding-left: $small-padding;
             padding-right: $small-padding;
         }
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1.362;
+}
+
+@media screen and (min-width: map-get($breakpoints, 'large')) {
+    #contact {
+        padding-bottom: 5 * $global-padding;
     }
 }
